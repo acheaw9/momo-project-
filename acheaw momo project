@@ -1,0 +1,110 @@
+#include <iostream>
+using namespace std;
+int main(){
+    float option,b,Tm,cr;
+    int num1,num2;
+    int pin=0000;//Default Pin
+    int balance=1000;//Default balance
+    cout<<"             AUTHENTICATION"<<endl;
+    cout<<"Enter Default Pin For Authentication"<<endl;
+    cin>>pin;
+    if(pin!=0000)
+	{
+    cout<<"Incorrect pin; 2nd attempt"<<endl;
+    cin>>pin;}
+    if(pin!=0000){
+	cout<<"Incorrect pin; 3rd attempt"<<endl;
+	cin>>pin;}
+	if(pin!=0000){
+    {return 0;}
+}
+    else if (pin==0000){
+    cout<<"		WELCOME TO VF-Cash MOMO"<<endl;
+    cout<<"          MENU"<<endl;   
+    cout<<" 1. Transfer Money"<<endl;
+    cout<<" 2. Allow Cash Out"<<endl;
+    cout<<" 3. Check Balance"<<endl;
+    cout<<" 4. Resetting/Change Pin"<<endl;
+    cout<<"Choose From Menu Options:"<<endl;}
+    cin>>option;
+    if(option==1) {
+	cout<<" Transfer Money"<<endl;
+    cout<<"1. Vodafone"<<endl;
+    cout<<"2. OTHER NETWORK"<<endl;
+    cout<<" Select Network"<<endl;
+    cin>>Tm;
+    if(Tm==1)
+    {cout<<"Enter Momo Number"<<endl;
+    cin>>num1;
+    cout<<"Confirm number"<<endl;
+    cin>>num2;
+	if(num2!=num1){
+	cout<<" Number not the same"<<endl;
+	cout<<" Try again another time"<<endl;
+	return 0;}
+	}
+    else if(Tm==2)
+    {cout<<"Choose Network by entering Number"<<endl;
+    cout<<"Enter Number"<<endl;
+    cin>>num1;
+    cout<<"confirm Number"<<endl;
+    cin>>num2;
+	if(num2!=num1){
+	cout<<"Number not the same"<<endl;
+	cout<<" Try again another time"<<endl;
+	return 0;}
+}
+    {
+    cout<<"Enter Amount"<<endl;
+    cin>>b;}
+    {
+    cout<<"You have choose to send an amount of "<<b <<"Ghc to "<<num1<<endl;
+    cout <<"Enter Momo Pin To Confirm";}
+    cin>>pin;
+    if(pin!=000){
+    cout<<"Incorrect pin"<<endl;
+    return 0;}
+    cout<<"You have successfully transfer an amount of ";
+    cout<<b <<"Ghc to " <<num1 <<endl;
+    if(b<=balance)
+    balance-=b;
+    cout<<"Your New balamce is:"<<balance<<endl;}
+    else if(b>=balance)
+	{
+    cout<<"Insufficient balance to complete transaction"<<endl;
+	}
+    if(option==2){
+    cout<<"1. Allow Cash Out"<<endl;
+    cin>>cr;
+    cout<<"Cash Out Is Allowed"<<endl;
+	}
+    if(option==3){
+    cout<<"Check Balance"<<endl;
+    cout<<"Enter Your Pin"<<endl;
+    cin>>pin;
+    if(pin!=0000){
+    cout<<"Incorrect pin."<<endl;
+    cout<<" Try again next time."<<endl;
+    cout<<"Thank you for using MTN Momo"<<endl;
+	return 0;}
+    cout<<"Your balance is 1,000"<<endl;
+	}
+    if(option==4){
+    cout<<"1. Change Pin"<<endl;
+    cout<<"2. Reset Pin"<<endl;
+    cin>>cr;
+    if(cr==1){
+    cout<<"Enter Default Pin:";
+    cin>>pin;
+    cout<<"Enter New Pin:";
+    cin>>pin;
+    cout<<"You have successfully change your Momo pin"<<endl;}
+    else if(cr==2){
+    cout<<"1. Reset Pin"<<endl;
+    cin>>cr;
+    cout<<"You have successfully Reset your pin"<<endl;}
+}
+    cout<<"Thank you for using VF-Cash"<<endl  ;
+    cout<<"#FutherTogether"; 
+	return 0;
+}
